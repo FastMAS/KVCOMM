@@ -9,7 +9,7 @@ KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Mult
 </div>
 
 <p align="center">
-  <h3 align="center">Demo of TTFT speedup under a two-agent setting</h3>
+  <h3 align="center">🖥️ Demo of TTFT speedup under a two-agent setting</h3>
   <video src="https://github-production-user-asset-6210df.s3.amazonaws.com/39550579/501226767-9e209eaf-8c58-42c9-ac0f-2cc155e806e8.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251015%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251015T010601Z&X-Amz-Expires=300&X-Amz-Signature=ce9f372145bff4c622536050a1871f555bf3cda35bf20ed8f8e4e5386bc617a6&X-Amz-SignedHeaders=host"
          controls
          muted
@@ -24,10 +24,10 @@ KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Mult
     <br>
 <p>
 
-## Introduction
+## 🔖 Introduction
 This is the up-to-date official implementation of KVCOMM in the paper, [**KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems**](https://arxiv.org/abs/2510.12872). KVCOMM is a novel adaptive serving paradigm for LLM-based Multi-agent Systems, which highlights the **online cross-context KV-cache resuse** for the shared text among dependent LLM agents. KVCOMM estimates and adjusts KV-caches for shared content by referencing a pool of cached examples—termed ***anchors***—that store observed cache deviations under varying prefixes. The anchor pool is maintained and updated online, allowing dynamic adaptation to distinct user requests and context structures. KVCOMM achieves over $70$\% reuse rate across diverse multi-agent workloads, including retrieval-augmented generation, math reasoning, and collaborative coding tasks, all without quality degradation. Particularly, when each fully-connected agent receives 1K input tokens with 512 prefix tokens and 512 output tokens under a five-agent setting, KVCOMM achieves up to $7.8\times$ speedup compared to the standard prefill pipeline, reducing TTFT from $\sim430$ ms to $\sim55$ ms on a single H100 GPU.
 
-KVCOMM offers the following insights:
+🌟 KVCOMM offers the following insights:
 | | |
 |---|---|
 | <img src="assets/kv_proximity.jpg" width="100%" alt="KV proximity"/> | <img src="assets/offset_proximity.jpg" width="100%" alt="Offset proximity"/> |
@@ -41,12 +41,12 @@ KVCOMM offers the following insights:
     <br>
 <p>
 
-And further proposes an anchor-based KV-cache Communication Module, which contains:
+🌟 And further proposes an anchor-based KV-cache Communication Module, which contains:
 > - **Anchor Matching**: locates the nearest anchors for the requested segment (See [kvcomm_engine.py:KVCOMMEngine._select_anchor_indices](https://github.com/HankYe/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L806)).
 > - **Offset Approximation**: predicts the offset by weighting the anchors' stored deviations (See [kvcomm_engine.py:KVCOMMEngine.offset_kv_cache_pair](https://github.com/HankYe/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L868)).
 > - **Anchor Prediction**: determines whether newly-generated KV-caches, e.g., responses, user inputs, etc., could be shared or treated as new anchor (See [kvcomm_engine.py:KVCOMMEngine.predict_as_anchor](https://github.com/HankYe/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L991)).
 
-## Installation
+## ⚙️ Installation
 ```bash
 $ git clone https://github.com/HankYe/KVCOMM
 $ cd KVCOMM
@@ -55,7 +55,7 @@ $ conda activate kvcomm
 $ pip install -r requirements.txt
 ```
 
-## Experiments
+## 🔬 Experiments
 Several examples are provided to run the main experiments in the paper, including three benchmarks, i.e., MMLU, GSM8K, HumanEval. The instructions are as follows, where 
 - `--mode` is the connection mode between agents, 
 - `--agent_names` assign agent class to each agent as defined in `KVCOMM/agents`, 
@@ -106,8 +106,10 @@ python experiments/run_humaneval.py --mode FullConnected --agent_names CodeWriti
 ```
 </details>
 
+## 🪜 Next Step
+Integration with the existing KV management frameworks, e.g., [LMCache](https://github.com/LMCache/LMCache) to support modern LLM-based serving systems.
 
-## Citation
+## 📖 Citation
 
 ```bibtex
 @misc{kvcomm25ye,
@@ -120,7 +122,7 @@ python experiments/run_humaneval.py --mode FullConnected --agent_names CodeWriti
 
 
 
-## Acknowledgements
+## 🍀 Acknowledgements
 We greatly acknowledge the authors of *AgentPrune* and *GPTSwarm* for their open-source codes. Visit the following links to access their more contributions.
 
 - [AgentPrune](https://github.com/yanweiyue/AgentPrune)
