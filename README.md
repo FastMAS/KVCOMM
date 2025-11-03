@@ -1,6 +1,6 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2510.12872-b31b1b.svg)](https://arxiv.org/abs/2510.12872)
-[![GitHub issues](https://img.shields.io/github/issues/HankYe/KVCOMM)](https://github.com/HankYe/KVCOMM/issues)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/HankYe/KVCOMM/pulls)
+[![GitHub issues](https://img.shields.io/github/issues/FastMAS/KVCOMM)](https://github.com/FastMAS/KVCOMM/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/FastMAS/KVCOMM/pulls)
 
 <div align="center">
 <h1 style="text-align: center; font-size: 2.5rem; font-weight: bolders">
@@ -42,17 +42,17 @@ This is the up-to-date official implementation of KVCOMM in the paper, [**KVCOMM
 <p>
 
 🌟 And further proposes an anchor-based KV-cache Communication Module, which contains:
-> - **Anchor Matching**: locates the nearest anchors for the requested segment (See [kvcomm_engine.py:KVCOMMEngine._select_anchor_indices](https://github.com/HankYe/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L806)).
-> - **Offset Approximation**: predicts the offset by weighting the anchors' stored deviations (See [kvcomm_engine.py:KVCOMMEngine.offset_kv_cache_pair](https://github.com/HankYe/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L868)).
-> - **Anchor Prediction**: determines whether newly-generated KV-caches, e.g., responses, user inputs, etc., could be shared or treated as new anchor (See [kvcomm_engine.py:KVCOMMEngine.predict_as_anchor](https://github.com/HankYe/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L991)).
+> - **Anchor Matching**: locates the nearest anchors for the requested segment (See [kvcomm_engine.py:KVCOMMEngine._select_anchor_indices](https://github.com/FastMAS/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L806)).
+> - **Offset Approximation**: predicts the offset by weighting the anchors' stored deviations (See [kvcomm_engine.py:KVCOMMEngine.offset_kv_cache_pair](https://github.com/FastMAS/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L868)).
+> - **Anchor Prediction**: determines whether newly-generated KV-caches, e.g., responses, user inputs, etc., could be shared or treated as new anchor (See [kvcomm_engine.py:KVCOMMEngine.predict_as_anchor](https://github.com/FastMAS/KVCOMM/blob/main/KVCOMM/llm/kvcomm_engine.py#L991)).
 
 ## ⚙️ Installation
 ```bash
-$ git clone https://github.com/HankYe/KVCOMM
-$ cd KVCOMM
-$ conda create -n kvcomm python==3.10
-$ conda activate kvcomm
-$ pip install -r requirements.txt
+git clone https://github.com/FastMAS/KVCOMM
+cd KVCOMM
+conda create -n kvcomm python==3.10
+conda activate kvcomm
+pip install -r requirements.txt
 ```
 
 ## 🔬 Experiments
