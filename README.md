@@ -10,11 +10,11 @@ KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Mult
 
 <p align="center">
   <h3 align="center">🖥️ Demo of TTFT speedup under a two-agent setting</h3>
-  <video src="https://github-production-user-asset-6210df.s3.amazonaws.com/39550579/501226767-9e209eaf-8c58-42c9-ac0f-2cc155e806e8.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251015%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251015T010601Z&X-Amz-Expires=300&X-Amz-Signature=ce9f372145bff4c622536050a1871f555bf3cda35bf20ed8f8e4e5386bc617a6&X-Amz-SignedHeaders=host"
+  <video src="./assets/kvcomm_ttft.mp4"
          controls
          muted
          playsinline>
-    <a href="https://github-production-user-asset-6210df.s3.amazonaws.com/39550579/501226767-9e209eaf-8c58-42c9-ac0f-2cc155e806e8.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251015%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251015T010601Z&X-Amz-Expires=300&X-Amz-Signature=ce9f372145bff4c622536050a1871f555bf3cda35bf20ed8f8e4e5386bc617a6&X-Amz-SignedHeaders=host">Demo of TTFT speedup under a two-agent setting.</a>
+    <a href="./assets/kvcomm_ttft.mp4">Demo of TTFT speedup under a two-agent setting.</a>
   </video>
 </p>
 
