@@ -10,11 +10,11 @@ KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Mult
 
 <p align="center">
   <h3 align="center">🖥️ Demo of TTFT speedup under a two-agent setting</h3>
-  <video src="./assets/kvcomm_ttft.mp4"
+  <video src="https://github.com/user-attachments/assets/12cc72fc-1c0a-4110-86a1-078ed48cc212"
          controls
          muted
          playsinline>
-    <a href="./assets/kvcomm_ttft.mp4">Demo of TTFT speedup under a two-agent setting.</a>
+    <a href="https://github.com/user-attachments/assets/12cc72fc-1c0a-4110-86a1-078ed48cc212">Demo of TTFT speedup under a two-agent setting.</a>
   </video>
 </p>
 
